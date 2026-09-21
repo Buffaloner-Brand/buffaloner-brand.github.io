@@ -1,7 +1,7 @@
 [project]
-name = "base-github-io"
+name = "buffaloner-brand-github-io"
 version = "0.1.0"
-description = "A Base Github Pages hosted static site, built with properdocs"
+description = "Buffaloner Brand Static Site Template, built with properdocs"
 readme = "README.md"
 authors = [
     { name = "The Buffaloner", email = "168052884+buffaloner@users.noreply.github.com" }
