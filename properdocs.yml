@@ -1,6 +1,6 @@
 site_name: Buffaloner Base Static Site Template
-# extra_css:
-#   - assets/stylesheets/custom.css
+extra_css:
+  - assets/stylesheets/custom.css
 # extra_javascript:
 #   - https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
 #   - assets/js/scripts.js

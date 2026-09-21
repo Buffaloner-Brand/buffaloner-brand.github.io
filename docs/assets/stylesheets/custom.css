@@ -1,0 +1,50 @@
+/* 1. Catches any H1 anywhere inside the actual markdown content area */
+  .md-typeset h1:first-of-type {
+    display: none !important;
+  }
+  
+  /* 2. Catches the breadcrumb title trail if navigation.path is enabled */
+  nav.md-path {
+    display: none !important;
+  }
+
+  .custom-inline-form {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.2rem;
+    padding: 2rem;
+    background-color: var(--md-default-bg-color);
+    box-shadow: var(--md-shadow-z1);
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .custom-inline-form h2 {
+    margin-top: 0;
+    color: var(--md-primary-fg-color);
+  }
+  
+  .custom-inline-form .form-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 0.1rem;
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  
+  .custom-inline-form .form-input:focus {
+    outline: none;
+    border-color: var(--md-primary-fg-color);
+    box-shadow: 0 0 0 1px var(--md-primary-fg-color);
+  }
+  
+  /* Forces the button to stretch full width for a modern form look */
+  .custom-inline-form .md-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
