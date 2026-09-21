@@ -21,33 +21,23 @@ Static Github Pages need to be public to work.
 
 Managed with `uv` for dependency management.
 
-`uv init --name "$(basename $(pwd))" --description "A Base Github Pages hosted static site, built with properdocs" --author-from auto --lib`
+`uv init --name "$(basename $(pwd))" --description "A static site built with properdocs" --author-from auto --lib`
+
+Any build or deployment hooks meant for things such as ETL processes should go in the `src` module.
 
 ## Deployment
+
+### Configuration
+
+On Github, got to 'Settings', click on 'Pages', use 'Deploy from a Branch'. Set 'Branch' to `gh-pages` and choose /(root), then 'Save'
+
+### Commands
 
 1. Build the site
 
     `uv run properdocs build`
 
-2. Check out the gh-pages branch into a temporary folder
+2. Deploy with `properdocs`
 
-    `git worktree add /tmp/gh-pages gh-pages`
+    `uv run properdocs gh-deploy --clean`
 
-3. Sync the built site over (keeping the hidden .git metadata)
-
-    `rsync -a --delete site/ /tmp/gh-pages/ --exclude=".git"`
-
-4. Sign the commit using standard git commands, which WILL respect your config
-
-    ```bash
-    cd /tmp/gh-pages
-    git add .
-    git commit -S -m "docs: deploy to gh-pages"
-    git push origin gh-pages
-    ```
-5. Clean up
-
-    ```
-    cd -
-    git worktree remove /tmp/gh-pages
-    ```
