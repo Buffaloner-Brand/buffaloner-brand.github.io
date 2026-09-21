@@ -1,0 +1,18 @@
+[project]
+name = "base-github-io"
+version = "0.1.0"
+description = "A Base Github Pages hosted static site, built with properdocs"
+readme = "README.md"
+authors = [
+    { name = "The Buffaloner", email = "168052884+buffaloner@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs-material>=9.7.7",
+    "properdocs>=1.6.7",
+    "pymdown-extensions>=11.0.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"

@@ -1,0 +1,54 @@
+site_name: Buffaloner Base Static Site Template
+# extra_css:
+#   - assets/stylesheets/custom.css
+# extra_javascript:
+#   - https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
+#   - assets/js/scripts.js
+theme:
+  # logo: assets/images/pizzajer.png
+  # favicon: assets/images/pizzajer.png
+  name: 'material'
+  font:
+    text: Merriweather Sans
+    code: Red Hat Mono
+  features:
+    - navigation.footer
+    - content.footnote.tooltips
+    - navigation.indexes
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      # primary: custom
+      # accent: custom
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      # primary: custom
+      # accent: custom
+markdown_extensions:
+  - admonition          # Enables the core notes/warnings boxes
+  - md_in_html
+  - pymdownx.details    # (Optional) Allows collapsible ??? blocks
+  - pymdownx.superfences # (Optional) Allows code blocks inside your notes
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+# Socials
+extra:
+  generator: false
+  social:
+    - icon: material/youtube
+      link: https://youtube.com/@the.buffaloner
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/jdanieltaylor
+    - icon: material/instagram
+      link: https://www.instagram.com/the.buffaloner/
+    - icon: material/facebook
+      link: https://www.facebook.com/the.buffaloner
+copyright: Copyright &copy; 2026 The Buffaloner
